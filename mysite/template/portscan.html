@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+			<div>
+				<ul class="breadcrumb">
+					<li>
+						<a class="ajax-link" href="dashboard">Home</a> <span class="divider">/</span>
+					</li>
+					<li>
+						<a class="ajax-link" href="portScan">Port Scan</a>
+					</li>
+				</ul>
+			</div>
+	<div class="row-fluid sortable">		
+<div class="box span12">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-th-list"></i>Port Scan</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<form method="post" target="portScan" class="form-horizontal">
+							<fieldset>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Device</label>
+<div class="controls">
+  <select name="deviceip" id="deviceip" data-rel="chosen">
+    <option value="Auto" selected="selected">Auto</option>
+    
+    {% for device in devices %}
+    <option>{{device.Ip}}</option>
+    {% endfor %}
+  </select>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">IP Range</label>
+<div class="controls" id="Iprange">
+<input name="Iprange" type="text" class="input-xlarge focused" id="Iprange">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Ports</label>
+<div class="controls">
+<input name="Ports" type="text" class="input-xlarge focused" id="Ports">
+</div>
+</div>
+{% if err_msg %}{{err_msg}}{{newjobid}} {% endif %}<br />
+<a href="portscanResult">Look for Results</a>
+<div class="form-actions">
+                              
+		  <button type="submit" class="btn btn-primary">Submit </button>
+							  </div>
+							</fieldset>
+				  </form>            
+  </div>
+				</div>
+	<p>{% endblock %} </p>
+	<p>&nbsp;</p>

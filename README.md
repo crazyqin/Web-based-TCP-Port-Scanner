@@ -2,6 +2,7 @@
 a TCP Port Scanner using Django as Web Framework.
 # Require:
 Linux<br>
+SQLite3<br>
 Python 2.7.6<br>
 Django 1.4.10<br>
 Paramiko(include ecdsa and pycrypto)<br>

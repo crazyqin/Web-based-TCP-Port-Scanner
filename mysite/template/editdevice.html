@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block content %}
+			<div>
+				<ul class="breadcrumb">
+					<li>
+						<a class="ajax-link" href="dashboard">Home</a> <span class="divider">/</span>
+					</li>
+					<li>
+						<a class="ajax-link" href="editDevice">Edit Device</a>
+					</li>
+				</ul>
+			</div>
+	<div class="row-fluid sortable">		
+				<div class="box span12">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-th-list"></i> Edit Device</h2>
+<div class="box-icon">
+		  <a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+		  <a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+		  <a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+		</div>
+					</div>
+					<div class="box-content">
+						<form method="post" target="editDevice-{{device.id}}" class="form-horizontal">
+							<fieldset>
+<div class="control-group">
+<label class="control-label" for="focusedInput">IP</label>
+<div class="controls">
+<input name="Ip" type="text" class="input-xlarge focused" id="Ip" value="{{device.Ip}}">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Username</label>
+<div class="controls">
+<input name="Username" type="text" class="input-xlarge focused" id="Username" value="{{device.Username}}">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Password</label>
+<div class="controls">
+<input name="Password" type="text" class="input-xlarge focused" id="Password" value="{{device.Password}}">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Position</label>
+<div class="controls">
+<input name="Position" type="text" class="input-xlarge focused" id="Position" value="{{device.Position}}">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Status</label>
+<div class="controls">
+<input name="State" type="text" class="input-xlarge focused" id="State" value="{{device.State}}">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Server</label>
+<div class="controls">
+<input name="Server" type="text" class="input-xlarge focused" id="Server" value="{{device.Server}}">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Owner</label>
+<div class="controls">
+<input name="Owner" type="text" class="input-xlarge focused" id="Owner" value="{{device.Owner}}">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">CPU</label>
+<div class="controls">
+<input name="Cpu" type="text" class="input-xlarge focused" id="Cpu" value="{{device.Cpu}}">
+</div>
+</div>
+<div class="control-group">
+  <label class="control-label" for="focusedInput2">MEM</label>
+  <div class="controls">
+    <input name="Mem" type="text" class="input-xlarge focused" id="Mem" value="{{device.Mem}}" />
+  </div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Disk</label>
+<div class="controls">
+<input name="Disk" type="text" class="input-xlarge focused" id="Disk" value="{{device.Disk}}">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">NIC</label>
+<div class="controls">
+<input name="Nic" type="text" class="input-xlarge focused" id="Nic" value="{{device.Nic}}">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">VGA</label>
+<div class="controls">
+<input name="Vga" type="text" class="input-xlarge focused" id="Vga" value="{{device.Vga}}">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">OS</label>
+<div class="controls">
+<input name="Os" type="text" class="input-xlarge focused" id="Os" value="{{device.Os}}">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Arch</label>
+<div class="controls">
+<input name="Arch" type="text" class="input-xlarge focused" id="Arch" value="{{device.Arch}}">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Kernel</label>
+<div class="controls">
+<input name="Kernel" type="text" class="input-xlarge focused" id="Kernel" value="{{device.Kernel}}">
+</div>
+</div>
+
+{% if err_msg %}{{err_msg}} {% endif %}
+							  <div class="control-group"></div>
+							  <div class="control-group"> </div>
+							  <div class="form-actions">
+                              
+								<button type="submit" class="btn btn-primary">Save </button>
+							  </div>
+							</fieldset>
+						  </form>            
+				  </div>
+				</div><!--/span-->
+			
+			</div><!--/row-->
+
+{% endblock %}

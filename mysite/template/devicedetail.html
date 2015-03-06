@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+  {% block content %}
+  <div>
+				<ul class="breadcrumb">
+					<li>
+						<a class="ajax-link" href="dashboard">Home</a> <span class="divider">/</span>
+					</li>
+					<li>
+						<a class="ajax-link" href="deviceList">Device</a><span class="divider">/</span>
+					</li>
+                    <li>
+						Detail
+					</li>
+				</ul>
+			</div>
+            <div class="row-fluid sortable">	
+<div class="box span12">
+            
+			  <div class="box-header well">
+						<h2><i class="icon-info-sign"></i> Detail</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<h1>IP:{{device.Ip}}</h1>
+						<p>&nbsp;</p>
+						<p>{% if err %} Something wrong happened.{% else %}</p>
+						<table width="629" border="0">
+						  <tr>
+						    <td width="313"><div class="span12">
+						      <h3>CPU:
+					          </h3>
+						      <p>{{device.Cpu}}
+					            <br />
+						      </p>
+</div></td>
+						    <td width="300"><div class="span12">
+						      <h3>MEM:</h3>
+						      {{device.Mem}}<br />
+						    </div></td>
+					      </tr>
+						  <tr>
+						    <td><div class="span12">
+						      <h3>DISK: </h3>
+						      <p>{{device.Disk}}
+						        <br />
+						      </p>
+						    </div></td>
+						    <td><div class="span12">
+					          <h3>NIC:
+					          </h3>
+						        {{device.Nic}}<br />
+						    </div></td>
+					      </tr>
+						  <tr>
+						    <td><div class="span12">
+					          <h3>VGA:
+					          </h3>
+						        {{device.Vga}}<br />
+						    </div></td>
+						    <td><div class="span12">
+					          <h3>OS:
+					          </h3>
+						        {{device.Os}}<br />
+						    </div></td>
+					      </tr>
+						  <tr>
+						    <td><div class="span12">
+					          <h3>ARCH:
+					          </h3>
+						        {{device.Arch}}<br />
+						    </div></td>
+						    <td><div class="span12">
+					          <h3>Kernel:
+					          </h3>
+						        {{device.Kernel}}<br />
+						    </div></td>
+					      </tr>
+						  <tr>
+						    <td><div class="span12">
+					          <h3>Position:
+					          </h3>
+						        {{device.Position}}<br />
+						    </div></td>
+						    <td><div class="span12">
+					          <h3>Status:
+					          </h3>
+						        {{device.State}}<br />
+						    </div></td>
+					      </tr>
+						  <tr>
+						    <td><div class="span12">
+					          <h3>Server:
+					          </h3>
+						        {{device.Server}}
+					        </div></td>
+						    <td><div class="span12">
+					          <h3>Owner:
+					          </h3>
+						        {{device.Owner}}
+						    </div></td>
+					      </tr>
+						  <tr>
+						    <td><div class="span12">
+					          <h3>Username:
+					          </h3>
+						        {{device.Username}}
+					        </div></td>
+						    <td><div class="span12">
+					          <h3>Password:
+					          </h3>
+						        {{device.Password}}
+					        </div></td>
+					      </tr>
+				      </table>
+					  <p>                        
+					  <p>{% endif %}</p>
+<div class="clearfix"></div>
+					</div>
+</div>
+{% endblock %}

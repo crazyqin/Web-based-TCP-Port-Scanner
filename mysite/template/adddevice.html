@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+			<div>
+				<ul class="breadcrumb">
+					<li>
+						<a class="ajax-link" href="dashboard">Home</a> <span class="divider">/</span>
+					</li>
+					<li>
+						<a class="ajax-link" href="addDevice">Add Device</a>
+					</li>
+				</ul>
+			</div>
+	<div class="row-fluid sortable">		
+				<div class="box span12">
+					<div class="box-header well" data-original-title>
+						<h2><i class="icon-th-list"></i> Add Device</h2>
+						<div class="box-icon">
+							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
+							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
+							<a href="#" class="btn btn-close btn-round"><i class="icon-remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+						<form method="post" target="addDevice" class="form-horizontal">
+							<fieldset>
+<div class="control-group">
+<label class="control-label" for="focusedInput">IP</label>
+<div class="controls">
+<input name="Ip" type="text" class="input-xlarge focused" id="Ip">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Username</label>
+<div class="controls">
+<input name="Username" type="text" class="input-xlarge focused" id="Username">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Password</label>
+<div class="controls">
+<input name="Password" type="text" class="input-xlarge focused" id="Password">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Position</label>
+<div class="controls">
+<input name="Position" type="text" class="input-xlarge focused" id="Position">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Server</label>
+<div class="controls">
+<input name="Server" type="text" class="input-xlarge focused" id="Server">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="focusedInput">Owner</label>
+<div class="controls">
+<input name="Owner" type="text" class="input-xlarge focused" id="Owner">
+</div>
+</div>{% if err_msg %}{{err_msg}} {% endif %}
+							  <div class="control-group"></div>
+							  <div class="control-group"> </div>
+							  <div class="form-actions">
+                              
+								<button type="submit" class="btn btn-primary">Save </button>
+							  </div>
+							</fieldset>
+						  </form>            
+				  </div>
+				</div><!--/span-->
+			
+			</div><!--/row-->
+
+{% endblock %}
